@@ -13,6 +13,15 @@ const App = () => {
   const x = 10;
   const y = 20;
   const names = ['dude','bro','pal','homie','mate'];
+  /* we can't use conditionals like in js 
+  conditionals in jsx should be in one single line */
+  const logged = false;
+  /*if (logged) {
+    return <h1>hello member</h1>
+  }*/
+  /* the problem is now we can't load the rest of the code
+  so we need to put if statement somewehere else 
+  in single line of code ( use ternary operator)*/
   return  (
     <div>
       <h1>Hello</h1>
@@ -24,9 +33,22 @@ const App = () => {
           {name}
         </li>))} </ul>
       </div>
+      {/*{logged ? <h1>hello member</h1>: <h1>hello guest</h1> }*/}
+      {/*{logged ? <h1>hello member</h1>:""}*/} 
+      {logged && <h1>hello member</h1>}
     </div>
   ) 
 }
 export default App;
+
+
+
+
+
+
+
+
+
+
 
 
